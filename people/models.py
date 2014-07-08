@@ -1,0 +1,18 @@
+from django.db import models
+from django.db.models.signals import post_save 
+from django.contrib.auth.models import User
+
+class People(models.Model):
+	user = models.OneToOneField(User)
+	name = models.CharField(max_length=100)
+	birthday = models.DateField()
+
+	def __unicode__(self):
+		return self.name
+
+# create our user object to attach to our people object
+#def create_people_user_callback(sender, instance, **kwargs):
+#	people, new = People.objects.get_or_create(user=instance)
+	
+#post_save.connect(create_people_user_callback, User)
+

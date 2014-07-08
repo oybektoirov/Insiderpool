@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="/media/css/insiderpool.css" />
+	{% block extrahead %}{% endblock %}
+</head>
+<body style="#fff">
+<div id="pageContainer" style="#fff">
+	<div id="logout">
+                {% if user.is_authenticated %}<p><a href="/logout/">Logout</a></p>{% else %}<p><a href="/login/">Login</a></p>{% endif %}
+        </div>
+	{% block content %}
+	{% endblock %}
+</div>
+</body>
+</html>
+

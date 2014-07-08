@@ -1,0 +1,9 @@
+body {
+       background-image: url(/media/images/background.jpg);
+       background-color: #111;
+       color: #FFF;
+}
+
+#pageContainer a {
+       color: #F44;
+}

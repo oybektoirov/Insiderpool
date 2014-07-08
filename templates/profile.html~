@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% blockcontent %}
+	<p>Name: {{ people.name }}</p>
+	<p>Birthday: {{ people.birthday }}</p>
+{% endblock %}
